@@ -1,25 +1,25 @@
 class Nash < Formula
   desc "The Nash programming language"
   homepage "https://nash-script.dev"
-  version "0.2.0"
+  version "0.2.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.0/nash-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "1e0df29b8b914b4b9f20d0211ea00e6edc611666986f21ae4b6f02252a2e481b"
+      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.2/nash-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "96ee0f508e3b023bc6e7d8cab71959437f1c0fb064795bb9df744811fd341b4b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.0/nash-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "dccb9535c30158c4442df394cd8c6f85a578f50285a8796ccd3e0a4b5c0f9551"
+      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.2/nash-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "9f62277a3a26cc46888beb81de45703ae10a5dc4bc3238f79e655ecc4a7244fa"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.0/nash-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c7f823dea333b974ecdec5c83f4c6b1fba61a0353ad7968f8011ba48b555ed66"
+      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.2/nash-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5bf0adf385a6db449802c5b55d803ef4acd6a55b0c1acca476076a6f63a1c454"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.0/nash-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "302884826e7b049730e0ada5fb055823a571888fb75c01849093af260fc8b3c7"
+      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.2/nash-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "94708108d11c61bf9496335542d0b9b04ff31e76d59bb3ea0bcc3f3e102cc038"
     end
   end
   license "Apache-2.0"
@@ -48,10 +48,18 @@ class Nash < Formula
   end
 
   def install
-    bin.install "nash" if OS.mac? && Hardware::CPU.arm?
-    bin.install "nash" if OS.mac? && Hardware::CPU.intel?
-    bin.install "nash" if OS.linux? && Hardware::CPU.arm?
-    bin.install "nash" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "nash"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "nash"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "nash"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "nash"
+    end
 
     install_binary_aliases!
 
