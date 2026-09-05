@@ -1,25 +1,25 @@
 class Nash < Formula
   desc "The Nash programming language"
   homepage "https://nash-script.dev"
-  version "0.2.3"
+  version "0.2.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.3/nash-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "b34fe53bcc6e27ddf065d7ad9fb24682697e55e85e12398bacbb38eab36bfaa5"
+      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.4/nash-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "c0baad3c9565a4ae3207dd21ccb05ae442f714e4594eb199dd14ef8fd1de932e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.3/nash-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "fca1e17707b673edbd7c4e8d1f979ba2db0ee3d51cdbd1844ac28c43b7d74eed"
+      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.4/nash-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "9bddbf3ce314c752a20664410b5e98a2de40e7ca6ac29737316925dba38fa899"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.3/nash-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "799b6480eafed5119ce00a43b84d03b551872b8df818b076cdddf031bfdf4bc5"
+      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.4/nash-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "57bfd7d6d80874e6d4c66c8d29b50f2ee517e2fa552f587002bd92e81c4defc2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.3/nash-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5edbcdc6682413ee872750565c90be77e192e53ffdfc1c2671580ed1d55bc257"
+      url "https://github.com/nash-script/compiler/releases/download/nash-cli-v0.2.4/nash-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d559d11a47a4a0e565bb1fcc2cfd068fe94e4953bfd2fb2d88c09df821da3ac2"
     end
   end
   license "Apache-2.0"
