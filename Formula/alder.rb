@@ -1,25 +1,25 @@
 class Alder < Formula
   desc "The Alder programming language"
   homepage "https://github.com/orbistry/alder"
-  version "0.2.3"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/orbistry/alder/releases/download/alder-cli-v0.2.3/alder-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "76fecd246ffeb4dfa9c2333e12068e6d3cbd77a45896ba1fe7d44c1c28aabf7c"
+      url "https://github.com/orbistry/alder/releases/download/alder-cli-v0.3.0/alder-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "95d1a356b2ce053a0ee507ac1c7fefc5baea239c141e4daf183b778959288c81"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orbistry/alder/releases/download/alder-cli-v0.2.3/alder-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "22467ea46dd3d8b5e163859b58c2f6406050fa2f334ee08d78dfe47aa38bf426"
+      url "https://github.com/orbistry/alder/releases/download/alder-cli-v0.3.0/alder-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "3902cafb90fdced4d300a51aa125b7a17ed5ecfda3f2d4459a71d7fb4a126d10"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/orbistry/alder/releases/download/alder-cli-v0.2.3/alder-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "67bb63a947ded24b4448f1ee11f6fe226d31beaa9a4c6af1a6c8b79f56239d1b"
+      url "https://github.com/orbistry/alder/releases/download/alder-cli-v0.3.0/alder-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "795443ffa13fb3790c54c979582fc3f6ef925ff81f6185b61896306af90822de"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/orbistry/alder/releases/download/alder-cli-v0.2.3/alder-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "eb42570000be22ac70b7bc5d713e23e4922a3edc7f745c8282d430a4e4679c80"
+      url "https://github.com/orbistry/alder/releases/download/alder-cli-v0.3.0/alder-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a4f727d96913c7459e0c08296c592360b9fb070ded325b91753b0c7c23d0e014"
     end
   end
   license "Apache-2.0"
